@@ -1,0 +1,141 @@
+theme = "catppuccin_mocha"
+
+[editor]
+scrolloff = 5
+mouse = false
+# default-yank-register =
+middle-click-paste = false
+scroll-lines = 3
+shell = ["fish", "-c"]
+line-number = "relative"
+cursorline = true
+cursorcolumn = false
+continue-comments = false
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+auto-completion = true
+path-completion = true
+auto-format = true
+idle-timeout = 250
+completion-timeout = 250
+preview-completion-insert = true
+completion-trigger-len = 1
+completion-replace = false
+auto-info = true
+true-color = true
+undercurl = true
+rulers = []
+bufferline = "multiple"
+color-modes = true
+text-width = 80
+workspace-lsp-roots = []
+default-line-ending = "native"
+insert-final-newline = true
+atomic-save = true
+trim-final-newlines = false
+trim-trailing-whitespace = false
+popup-border = "none"
+indent-heuristic = "hybrid"
+jump-label-alphabet = "abcdefghijklmnopqrstuvwxyz"
+end-of-line-diagnostics = "disable"
+clipboard-provider = "wayland"
+editor-config = true
+
+# [editor.clipboard-provider]
+
+[editor.statusline]
+left = ["mode", "file-absolute-path", "read-only-indicator", "file-modification-indicator"]
+center = []
+right = ["file-encoding", "mode"]
+separator = ""
+mode.normal = ""
+mode.insert = ""
+mode.select = ""
+diagnostics = ["warning", "error"]
+workspace-diagnostics = ["warning", "error"]
+
+[editor.lsp]
+enable = true
+display-messages = true
+display-progress-messages = false
+auto-signature-help = true
+display-inlay-hints = false
+# inlay-hints-length-limit =
+display-color-swatches = true
+display-signature-help-docs = true
+snippets = true
+goto-reference-include-declaration = true
+
+[editor.cursor-shape]
+normal = "block"
+insert = "block"
+select = "block"
+
+[editor.file-picker]
+hidden = true
+follow-symlinks = true
+deduplicate-links = true
+parents = true
+ignore = true
+git-ignore = true
+git-global = true
+git-exclude = true
+# max-depth =
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+"'" = "'"
+
+[editor.auto-save]
+focus-lost = false
+after-delay.enable = false
+after-delay.timeout = 3000
+
+[editor.search]
+smart-case = true
+wrap-around = true
+
+[editor.whitespace]
+render = "none"
+characters = {}
+
+[editor.indent-guides]
+render = true
+character = "│"
+skip-levels = 0
+
+# [editor.gutters]
+# layout = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+
+# [editor.gutters.line-numbers]
+# min-width = 3
+
+# [editor.gutters.diagnostics]
+
+# [editor.gutters.diff]
+
+[editor.soft-wrap]
+enable = false
+max-wrap = 20
+max-indent-retain = 40
+wrap-indicator = "\\n"
+wrap-at-text-width = false
+
+[editor.smart-tab]
+enable = true
+supersede-menu = false
+
+[keys.normal]
+A-w = ":w"
+A-q = ":q"
+A-n = ":bn"
+A-p = ":bp"
+A-x = ":bc"
+
+[keys.insert]
+j = { k = "normal_mode" }
+
+# [keys.select]
