@@ -1,14 +1,13 @@
 theme = "catppuccin_mocha"
 
 [editor]
-scrolloff = 5
+scrolloff = 8
 mouse = false
-# default-yank-register =
 middle-click-paste = false
-scroll-lines = 3
+scroll-lines = 2
 shell = ["fish", "-c"]
 line-number = "relative"
-cursorline = true
+cursorline = false
 cursorcolumn = false
 continue-comments = false
 gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
@@ -32,21 +31,19 @@ default-line-ending = "native"
 insert-final-newline = true
 atomic-save = true
 trim-final-newlines = false
-trim-trailing-whitespace = false
-popup-border = "none"
+trim-trailing-whitespace = true
+popup-border = "popup"
 indent-heuristic = "hybrid"
 jump-label-alphabet = "abcdefghijklmnopqrstuvwxyz"
 end-of-line-diagnostics = "disable"
 clipboard-provider = "wayland"
 editor-config = true
 
-# [editor.clipboard-provider]
-
 [editor.statusline]
-left = ["mode", "file-absolute-path", "read-only-indicator", "file-modification-indicator"]
+left = ["mode", "file-name", "read-only-indicator", "file-modification-indicator"]
 center = []
-right = ["file-encoding", "mode"]
-separator = ""
+right = ["diagnostics", "mode"]
+separator = "│"
 mode.normal = ""
 mode.insert = ""
 mode.select = ""
@@ -59,7 +56,7 @@ display-messages = true
 display-progress-messages = false
 auto-signature-help = true
 display-inlay-hints = false
-# inlay-hints-length-limit =
+inlay-hints-length-limit = 1
 display-color-swatches = true
 display-signature-help-docs = true
 snippets = true
@@ -79,15 +76,6 @@ ignore = true
 git-ignore = true
 git-global = true
 git-exclude = true
-# max-depth =
-
-[editor.auto-pairs]
-'(' = ')'
-'{' = '}'
-'[' = ']'
-'"' = '"'
-'`' = '`'
-"'" = "'"
 
 [editor.auto-save]
 focus-lost = false
@@ -100,42 +88,21 @@ wrap-around = true
 
 [editor.whitespace]
 render = "none"
-characters = {}
 
 [editor.indent-guides]
 render = true
 character = "│"
 skip-levels = 0
 
-# [editor.gutters]
-# layout = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
-
-# [editor.gutters.line-numbers]
-# min-width = 3
-
-# [editor.gutters.diagnostics]
-
-# [editor.gutters.diff]
-
-[editor.soft-wrap]
-enable = false
-max-wrap = 20
-max-indent-retain = 40
-wrap-indicator = "\\n"
-wrap-at-text-width = false
-
 [editor.smart-tab]
 enable = true
 supersede-menu = false
 
 [keys.normal]
-A-w = ":w"
 A-q = ":q"
+A-w = ":w"
 A-n = ":bn"
 A-p = ":bp"
-A-x = ":bc"
 
 [keys.insert]
 j = { k = "normal_mode" }
-
-# [keys.select]

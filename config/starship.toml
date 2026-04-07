@@ -1,0 +1,50 @@
+add_newline = true
+
+format = """
+$username$hostname$directory
+$character
+"""
+
+[username]
+style_root = 'red'
+style_user = 'green'
+detect_env_vars = []
+format = '[$user]($style)'
+show_always = true
+disabled = false
+aliases = {}
+
+[hostname]
+ssh_only = false
+ssh_symbol = 'ssh:'
+trim_at = ''
+detect_env_vars = []
+format = '[@$ssh_symbol$hostname: ]($style)'
+style = 'green'
+disabled = false
+aliases = {}
+
+[directory]
+truncation_length = 0
+truncate_to_repo = false
+format = '[$path]($style)[$read_only]($read_only_style)'
+style = 'cyan'
+disabled = false
+read_only = '!'
+read_only_style = 'red'
+truncation_symbol = ''
+before_repo_root_style = 'cyan'
+repo_root_style = 'green'
+repo_root_format = '[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style)'
+home_symbol = '~'
+use_os_path_sep = true
+
+[character]
+format = '$symbol '
+success_symbol = '[>](green)'
+error_symbol = '[>](red)'
+vimcmd_symbol = '[<](green)'
+vimcmd_replace_one_symbol = '[<](purple)'
+vimcmd_replace_symbol = '[<](purple)'
+vimcmd_visual_symbol = '[<](yellow)'
+disabled = false
